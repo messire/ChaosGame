@@ -1,0 +1,26 @@
+﻿<Window x:Class="Fractals.Polygones.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Fractals.Polygones"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded" MouseLeftButtonUp="Window_MouseLeftButtonUp" MouseRightButtonUp="Window_MouseRightButtonUp" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StatusBar Grid.Row="0" DockPanel.Dock="Bottom">
+            <TextBlock Text="Speed:"></TextBlock>
+            <TextBox x:Name="SpeedBox" Text="30" Width="50" PreviewTextInput="SpeedBox_PreviewTextInput" TextChanged="SpeedBox_TextChanged"/>
+            <Slider x:Name="SpeedSlider" Maximum="8" SmallChange="1" Value="1" Width="200" ValueChanged="SpeedSlider_ValueChanged" Minimum="1" />
+
+            <TextBlock Text="Vertexes:"></TextBlock>
+            <TextBox x:Name="VertexBox" Text="30" Width="50" PreviewTextInput="VertexBox_PreviewTextInput" TextChanged="VertexBox_TextChanged"/>
+            <Slider x:Name="VortexSlider" Maximum="64" SmallChange="1" Value="4" Width="200" ValueChanged="VertexSlider_ValueChanged" Minimum="3" />
+            <Button x:Name="PlayButton" Height="20" Width="20" Content="4" FontFamily="Webdings" Click="PlayButton_Click" />
+        </StatusBar>
+        <Canvas Grid.Row="1" Name="DrawPanel"/>
+    </Grid>
+</Window>
