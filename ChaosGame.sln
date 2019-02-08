@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrownianMotion", "BrownianM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fractals. Polygones", "Fractals. Polygones\Fractals. Polygones.csproj", "{8F4B9DAF-422F-4D0F-82C4-F8CD09D1A27D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractGeometry", "AbstractGeometry\AbstractGeometry.csproj", "{B57BBCBB-DE27-4C8C-A9AA-8A1520D12CC0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{8F4B9DAF-422F-4D0F-82C4-F8CD09D1A27D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F4B9DAF-422F-4D0F-82C4-F8CD09D1A27D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F4B9DAF-422F-4D0F-82C4-F8CD09D1A27D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B57BBCBB-DE27-4C8C-A9AA-8A1520D12CC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B57BBCBB-DE27-4C8C-A9AA-8A1520D12CC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B57BBCBB-DE27-4C8C-A9AA-8A1520D12CC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B57BBCBB-DE27-4C8C-A9AA-8A1520D12CC0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
