@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BrownianMotion"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" MouseLeftButtonDown="Window_MouseLeftButtonDown">
+        Title="MainWindow" Height="450" Width="800" MouseLeftButtonDown="Window_MouseLeftButtonDown" MouseMove="Window_MouseMove" MouseRightButtonDown="Window_MouseRightButtonDown">
     <Grid>
         <Canvas x:Name="DrawCanvas" Margin="0,0,0,0"/>
     </Grid>
