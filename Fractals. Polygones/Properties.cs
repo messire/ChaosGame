@@ -30,31 +30,31 @@ namespace Fractals.Polygones
         public double Speed => _speed;
         public int Vertexes => _vertexes;
 
-        public double Height
+        private double Height
         {
             get => _height;
-            private set
+            set
             {
                 _height = value;
                 _center = new Point(_width / 2, _height / 2);
             }
         }
-        public double Width
+
+        private double Width
         {
             get => _width;
-            private set
+            set
             {
                 _width = value;
                 _center = new Point(Width / 2, Height / 2);
             }
-
         }
 
         #endregion
 
         #region Constructor
 
-        public Props()
+        private Props()
         {
             _center = new Point();
             _height = 0;
@@ -105,6 +105,5 @@ namespace Fractals.Polygones
         }
 
         #endregion
-
     }
 }

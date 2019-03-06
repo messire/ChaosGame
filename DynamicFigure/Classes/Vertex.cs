@@ -8,9 +8,9 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Shapes;
 
-namespace BrownianMotion
+namespace DynamicFigure.Classes
 {
-    static class Spot
+    static class Vertex
     {
         public static Ellipse CreateDot(int radius, SolidColorBrush color, Point coordinates)
         {

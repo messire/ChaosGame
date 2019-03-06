@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 
-namespace BrownianMotion
+namespace DynamicFigure.Classes
 {
     class DrawData
     {
@@ -20,12 +22,12 @@ namespace BrownianMotion
 
         #region Fields
 
-        private readonly Dictionary<Guid, Ellipse> _dotList;
+        private readonly List<Ellipse> _dotList;
         private double _height;
         private Point _lastClick;
         private readonly int _radius;
         private double _width;
-        
+
         #endregion
 
         #region Dictionaries
@@ -34,15 +36,15 @@ namespace BrownianMotion
         private readonly Dictionary<string, Func<double>> _maxValuesDictionary;
         private readonly Dictionary<string, Func<Ellipse, double>> _beginValuesDictionary;
         private readonly Dictionary<string, Action<Ellipse, double>> _relocateValuesDictionary;
-        
+
         #endregion
 
         #region Public Properties
 
         public Ellipse Dot
         {
-            get => _dotList.Last().Value;
-            private set => _dotList.Add(Guid.NewGuid(), value);
+            get => _dotList.Last();
+            private set => _dotList.Add(value);
         }
 
         #endregion
@@ -52,7 +54,7 @@ namespace BrownianMotion
         public DrawData()
         {
             _radius = 5;
-            _dotList = new Dictionary<Guid, Ellipse>();
+            _dotList = new List<Ellipse>();
             _lastClick = new Point(0, 0);
 
             _propertiesList = new Dictionary<string, PropertyPath> {{"x", _leftPath}, {"y", _topPath}};
@@ -90,7 +92,7 @@ namespace BrownianMotion
             _propertiesList.TryGetValue(animatedValue, out var property);
             _maxValuesDictionary.TryGetValue(animatedValue, out var maxValue);
             _beginValuesDictionary.TryGetValue(animatedValue, out var beginValue);
-            
+
             DoubleAnimation da = Animator.CreateDoubleAnimation(beginValue.Invoke(dot), maxValue.Invoke());
 
             da.Completed += (sender, args) =>
@@ -105,7 +107,7 @@ namespace BrownianMotion
             story.Begin();
         }
 
-        private void CreateDot() => Dot = Spot.CreateDot(_radius, Brushes.Black, _lastClick);
+        private void CreateDot() => Dot = Vertex.CreateDot(_radius, Brushes.Black, _lastClick);
 
         #endregion
     }

@@ -36,12 +36,12 @@ namespace BrownianMotion
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            //DoMagic(e.GetPosition(this));
+            DoMagic(e.GetPosition(this));
         }
 
         private void Window_MouseMove(object sender, MouseEventArgs e)
         {
-            DoMagic(e.GetPosition(this));
+            //DoMagic(e.GetPosition(this));
         }
 
         private void Window_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
@@ -51,7 +51,7 @@ namespace BrownianMotion
 
         private void DoMagic(Point clickPoint)
         {
-            if (DrawCanvas.Children.Count > 100) DrawCanvas.Children.RemoveAt(0);
+            if (DrawCanvas.Children.Count > 4) DrawCanvas.Children.RemoveAt(0);
 
             _drawData.SetLastClick(clickPoint);
             _drawData.Init();

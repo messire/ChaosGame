@@ -12,9 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using AbstractGeometry.Model;
 
-namespace AbstractGeometry
+namespace DynamicFigure
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -24,13 +23,6 @@ namespace AbstractGeometry
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void Window_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            var d = new Dumbbell(e.GetPosition(this));
-
-            DrawCanvas.Children.Add(d.Link);
         }
     }
 }
